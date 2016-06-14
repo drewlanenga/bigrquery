@@ -200,8 +200,8 @@ BigQuery <- R6::R6Class("BigQuery",
 # SQL translation --------------------------------------------------------------
 
 #' @export
-#' @importFrom dplyr src_translate_env
-src_translate_env.src_bigquery <- function(x) {
+#' @importFrom dplyr sql_translate_env
+sql_translate_env.src_bigquery <- function(x) {
   dplyr::sql_variant(
     dplyr::sql_translator(.parent = dplyr::base_scalar,
       # Casting
